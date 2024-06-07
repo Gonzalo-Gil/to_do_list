@@ -1,0 +1,47 @@
+<section class="todoapp">
+  <header>
+    <h1>To Do List</h1>
+    <%= new(Map.put(assigns, :action, ~p"/tasks/new")) %>
+  </header>
+  <section class="main" style="display: block; padding: 0 20px 20px 20px;">
+    <.table id="tasks" rows={@tasks}>
+      <:col :let={task} label="Title"><%= task.title %></:col>
+      <:col :let={task} label="Status">
+        <%= if task.status == 1 do %>
+          Completed
+        <% else %>
+          Active
+        <% end %>
+      </:col>
+      <:action :let={task}>
+        <.link navigate={~p"/tasks/#{task}/edit"}>Edit</.link>
+      </:action>
+      <:action :let={task}>
+        <.link href={~p"/tasks/#{task}"} method="delete">
+          Delete
+        </.link>
+      </:action>
+      <:action :let={task}>
+        <%= if task.status == 1 do %>
+          <.link href={~p"/tasks/toggle/#{task.id}"}>Re-open</.link>
+        <% else %>
+          <.link href={~p"/tasks/toggle/#{task.id}"}>Finish</.link>
+        <% end %>
+      </:action>
+    </.table>
+  </section>
+  <footer class="footer" style="display: block;">
+    <span class="todo-count"><strong><%= remaining_tasks(@tasks) %></strong> tasks left</span>
+    <ul class="filters">
+      <li>
+        <.link href={~p"/tasks/filter/all"} class="toggle">All</.link>
+      </li>
+      <li>
+        <.link href={~p"/tasks/filter/active"} class="toggle">Active</.link>
+      </li>
+      <li>
+        <.link href={~p"/tasks/filter/completed"} class="toggle">Completed</.link>
+      </li>
+    </ul>
+  </footer>
+</section>

@@ -1,0 +1,14 @@
+{
+    "coverage_options": {
+      "minimum_coverage": 90
+    },
+    "skip_files": [
+      "test/",
+      "lib/to_do/application.ex",
+      "lib/to_do_web.ex",
+      "lib/to_do_web/telemetry.ex",
+      "lib/to_do_web/components/core_components.ex",
+      "lib/to_do_web/channels/user_socket.ex"
+    ]
+  }
+  
