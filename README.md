@@ -1,4 +1,7 @@
-# ToDo
+# To-Do List
+
+Simple Todo List app that allows the user to create, update, delete and see their tasks. Built with Phoenix with the objective of learning and applying the concepts of backend programming with Elixir and Phoenix.
+Some parts, like the interface, are inspired by the [phoenix-todo-list-tutorial](https://github.com/dwyl/phoenix-todo-list-tutorial) listed in the hacking-learning-path.
 
 To start your Phoenix server:
 
@@ -7,12 +10,8 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Links of interest
 
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
   * Guides: https://hexdocs.pm/phoenix/overview.html
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
